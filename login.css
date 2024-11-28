@@ -1,0 +1,248 @@
+/* animação da logo quando passar o mouse (glitch) */
+@keyframes glitch {
+  0% {
+      transform: translateX(0);
+  }
+  10% {
+      transform: translateX(-5px);
+  }
+  20% {
+      transform: translateX(5px);
+  }
+  30% {
+      transform: translateX(-3px);
+  }
+  40% {
+      transform: translateX(3px);
+  }
+  50% {
+      transform: translateX(0);
+  }
+  60% {
+      transform: translateX(-2px);
+  }
+  70% {
+      transform: translateX(2px);
+  }
+  80% {
+      transform: translateX(0);
+  }
+  90% {
+      transform: translateX(-1px);
+  }
+  100% {
+      transform: translateX(1px);
+  }
+}
+
+.logo img {
+  width: 100%;
+  max-width: 200px;
+  transition: transform 0.2s ease; 
+}
+
+.logo img:hover {
+  animation: glitch 0.5s ease-out infinite; 
+}
+
+/* animação do background ao carregar a aba */
+@keyframes fadeBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* animação dos assets ao carregar a aba */
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px); 
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0); 
+  }
+}
+
+body {
+  background-color: #111111;
+}
+
+/* configurações gerais da aba */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* nav bar */
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 7%;
+  background-color: black;
+  transition:transform 0.3s ease;
+  border-bottom: 1px outset rgb(146, 146, 146);
+}
+
+.logo {
+  font-size: 20px;
+}
+
+
+.navbar {
+  display: flex;
+  margin-left: 10%;
+}
+
+.navbar a {
+  justify-content: space-between;
+  color: white;
+  margin-left: 65px;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 4px solid transparent;
+  padding-bottom: 45px;
+  transition: all .55s ease;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid white;
+
+}
+
+header button{
+  background-color: black;
+  border: 0 solid rgb(0, 0, 0);
+  border-radius: 0%;
+  padding: 0px;
+  padding-inline: 30px;
+  margin-left: -150px;
+  font-size: 00px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  transition: all .55s ease;
+  cursor: pointer;
+}
+
+
+.login img {
+  padding-bottom: 3px;
+  margin-left: 650%;
+  width: 130%;  /* Ajuste o valor conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.login {
+  font-size: 70px; /* Isso afeta o tamanho da fonte do texto, não o ícone */
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #ffffff;
+}
+
+.container {
+  margin-top: 200px;
+  margin-left: 785px;
+  position: relative;
+  width: 370px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #777;
+  position: relative;
+}
+
+.tab-btn.active {
+  color: #000000;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #000000;
+  border-radius: 3px;
+}
+
+.form-container form {
+  display: none;
+}
+
+.form-container form.active {
+  display: block;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-field input:focus {
+  border-color: #000000;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #000000;
+}
+
+.success-message {
+  display: none;
+  color: #000000;
+  text-align: center;
+  margin-top: 20px;
+}

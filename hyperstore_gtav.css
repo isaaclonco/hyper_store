@@ -1,0 +1,365 @@
+/* animação da logo quando passar o mouse (glitch) */
+@keyframes glitch {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-5px);
+    }
+    20% {
+        transform: translateX(5px);
+    }
+    30% {
+        transform: translateX(-3px);
+    }
+    40% {
+        transform: translateX(3px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(-2px);
+    }
+    70% {
+        transform: translateX(2px);
+    }
+    80% {
+        transform: translateX(0);
+    }
+    90% {
+        transform: translateX(-1px);
+    }
+    100% {
+        transform: translateX(1px);
+    }
+}
+
+.logo img {
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.2s ease; 
+}
+
+.logo img:hover {
+    animation: glitch 0.5s ease-out infinite; 
+}
+
+/* animação do background ao carregar a aba */
+@keyframes fadeBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* animação dos assets ao carregar a aba */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+body {
+    background-color: #111111;
+}
+
+/* configurações gerais da aba */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* nav bar */
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 7%;
+    background-color: black;
+    transition:transform 0.3s ease;
+    border-bottom: 1px outset rgb(146, 146, 146);
+}
+
+.logo {
+    font-size: 20px;
+}
+
+
+.navbar {
+    display: flex;
+    margin-left: 10%;
+}
+
+.navbar a {
+    justify-content: space-between;
+    color: white;
+    margin-left: 65px;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 4px solid transparent;
+    padding-bottom: 45px;
+    transition: all .55s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid white;
+
+}
+
+header button{
+    background-color: black;
+    border: 0 solid rgb(0, 0, 0);
+    border-radius: 0%;
+    padding: 0px;
+    padding-inline: 30px;
+    margin-left: -150px;
+    font-size: 00px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    transition: all .55s ease;
+    cursor: pointer;
+}
+
+/* configurações do texto principal */
+.game {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    color: white;
+    margin-bottom: 100px;
+}
+
+section {
+    padding: 0 10%;
+}
+
+.game-text h1 {
+    position: relative;
+    font-family: "DM Sans",sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.game-text p {
+    font-size: 25px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.game-text button{
+    background-color: transparent;
+    border: 1.5px solid rgb(255, 255, 255);
+    border-radius: 5%;
+    padding: 25px;
+    padding-inline:  100px;
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-top: 30px;
+    transition: all .55s ease;
+    cursor: pointer;
+}
+
+.game-text button:hover{
+    background-color: white;
+    border-bottom: 1.5px solid black;
+    color: black;
+}
+
+.game {
+    background-image: url('/assets/games/gtav_assets/wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+    background-position: 50%;
+    top: -30px;
+    animation: fadeBackground 1.5s ease forwards;
+}
+
+/* configurações da logo do jogo */
+.gta-logo {
+    position: absolute;
+    top: 230px; 
+    left: 15%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 180px; 
+}
+
+.gta-logo img {
+    width: 100%; 
+    height: auto;  
+}
+
+/* configurações da logo online do jogo */
+.gta-logo-online {
+    position: absolute;
+    top: 220px; 
+    left: 25%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 165px; 
+}
+
+.gta-logo-online img {
+    width: 100%; 
+    height: auto;  
+}
+
+/* configurações texto secundario */
+.game-descricao {
+    height: 100%;
+    width: 100%;
+    min-height: 30vh;
+    position: relative; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    color: white;
+    margin-bottom: 300px;
+}
+
+.game-descricao h1 {
+    position: relative;
+    left: 150%;
+    transform: translateX(-50%);
+    font-family: "DM Sans",sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.game-descricao p {
+    position: relative;
+    left: 150%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* configurações texto descrição online */
+
+.game-descricao-online{
+    margin-bottom: 300px;
+}
+
+.game-text-descricao-online {
+    height: 100%;
+    width: 100%;
+    min-height: 30vh;
+    position: relative; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    color: white;
+}
+
+.game-text-descricao-online h1 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "DM Sans",sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.game-text-descricao-online p {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+/* animação scroll*/
+
+.effect-img-gtalogo, .effect-text,  .effect-container, .effect-text-descricao, .effect-img-gtaonline, .effect-arrow1, .effect-img-banner-online, .effect-text-descricao-online, .effect-img-banner{
+    visibility: hidden;
+}
+
+/* configurações do banner descrição */
+.gta-banner {
+    position: absolute;
+    top: -100px; 
+    left: 17%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+}
+
+.gta-banner img {
+    width: 170%; 
+    height: auto;  
+}
+
+/* configurações do banner descrição online */
+.gta-banner-online {
+    position: absolute;
+    top: -100px; 
+    left: 65%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+}
+
+.gta-banner-online img {
+    width: 170%; 
+    height: auto;  
+}
+
+
+.login img {
+    padding-bottom: 3px;
+    margin-left: 650%;
+    width: 130%;  /* Ajuste o valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.login {
+    font-size: 70px; /* Isso afeta o tamanho da fonte do texto, não o ícone */
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ffffff;
+}

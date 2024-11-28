@@ -1,0 +1,193 @@
+/* animação da logo quando passar o mouse (glitch) */
+@keyframes glitch {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-5px);
+    }
+    20% {
+        transform: translateX(5px);
+    }
+    30% {
+        transform: translateX(-3px);
+    }
+    40% {
+        transform: translateX(3px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(-2px);
+    }
+    70% {
+        transform: translateX(2px);
+    }
+    80% {
+        transform: translateX(0);
+    }
+    90% {
+        transform: translateX(-1px);
+    }
+    100% {
+        transform: translateX(1px);
+    }
+  }
+  
+  .logo img {
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.2s ease; 
+  }
+  
+  .logo img:hover {
+    animation: glitch 0.5s ease-out infinite; 
+  }
+  
+  /* animação do background ao carregar a aba */
+  @keyframes fadeBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* animação dos assets ao carregar a aba */
+  @keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+  }
+  
+  body {
+    background-color: #111111;
+  }
+  
+  /* configurações gerais da aba */
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  /* nav bar */
+  header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 7%;
+    background-color: black;
+    transition:transform 0.3s ease;
+    border-bottom: 1px outset rgb(146, 146, 146);
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  
+  .navbar {
+    display: flex;
+    margin-left: 10%;
+  }
+  
+  .navbar a {
+    justify-content: space-between;
+    color: white;
+    margin-left: 65px;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 4px solid transparent;
+    padding-bottom: 45px;
+    transition: all .55s ease;
+  }
+  
+  .navbar a:hover {
+    border-bottom: 2px solid white;
+  
+  }
+  
+  header button{
+    background-color: black;
+    border: 0 solid rgb(0, 0, 0);
+    border-radius: 0%;
+    padding: 0px;
+    padding-inline: 30px;
+    margin-left: -150px;
+    font-size: 00px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    transition: all .55s ease;
+    cursor: pointer;
+  }
+  
+  
+  .login img {
+    margin-left: -550%;
+    width: 130%;  /* Ajuste o valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  
+  .login {
+    font-size: 70px; /* Isso afeta o tamanho da fonte do texto, não o ícone */
+  }
+  
+  .login img {
+    padding-bottom: 3px;
+    margin-left: 650%;
+    width: 130%;  /* Ajuste o valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  
+  .login {
+    font-size: 70px; /* Isso afeta o tamanho da fonte do texto, não o ícone */
+  }
+  
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: #ffffff;
+  }
+      
+
+.sobre {
+    font-family: "DM Sans",sans-serif;
+    font-weight: 800;
+    text-align: center;
+    padding: 40px 10%;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 40px 10%;
+}
+
+.sobre h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.sobre p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d3d3d3;
+    margin-bottom: 20px;
+}
+
+
